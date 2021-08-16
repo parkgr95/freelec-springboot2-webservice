@@ -1,5 +1,6 @@
 package com.parkgr95.springboot.domain.posts;
 
+import com.parkgr95.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import javax.persistence.*;
 // public Posts() {}와 같은 효과
 @Entity // 테이블과 링크될 클래스
 // Entity 클래스에서는 절대 Setter 메소드를 만들지 않는다.
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id // 해당 테이블의 PK필드
     @GeneratedValue(strategy = GenerationType.IDENTITY) // GeneratedValue: PK의 생성 규칙
