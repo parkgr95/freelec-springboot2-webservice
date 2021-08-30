@@ -1,6 +1,6 @@
 package com.parkgr95.springboot.web;
 
-import com.parkgr95.springboot.service.posts.PostService;
+import com.parkgr95.springboot.service.posts.PostsService;
 import com.parkgr95.springboot.web.dto.PostsResponseDto;
 import com.parkgr95.springboot.web.dto.PostsSaveRequestDto;
 import com.parkgr95.springboot.web.dto.PostsUpdateRequestDto;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class PostApiController {
 
-    private final PostService postsService;
+    private final PostsService postsService;
 
     @PostMapping("/api/v1/posts") //등록
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
